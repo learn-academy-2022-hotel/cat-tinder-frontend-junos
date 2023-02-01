@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
 const ToonNew = () => {
   return (
     <>
-    <h1>New Page</h1>
+      <h1>New Page</h1>
     </>
   )
 }
 
-export default ToonNew;
+export default ToonNew

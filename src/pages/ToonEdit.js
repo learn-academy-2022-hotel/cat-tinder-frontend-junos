@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
 const ToonEdit = () => {
   return (
     <>
-    <h1>Edit Page</h1>
+      <h1>Edit Page</h1>
     </>
   )
 }
 
-export default ToonEdit;
+export default ToonEdit

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react"
 import mockToons from './mockToon.js'
 import { Routes, Route } from "react-router-dom"
 import Footer from "./components/Footer"
@@ -14,8 +14,6 @@ import './App.css'
 
 const App = () => {
   const [toons, setToon] = useState(mockToons)
-
-  console.log(toons);
 
   return (
     <>
@@ -33,4 +31,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App
