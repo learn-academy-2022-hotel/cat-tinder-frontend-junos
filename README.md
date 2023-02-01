@@ -72,3 +72,141 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### logo
 https://www.canva.com/design/DAFZR1T4EMw/ahIyP1q8yEYNyLZU04B_GQ/watch?utm_content=DAFZR1T4EMw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+
+### Dropdown (for Header) structure
+{/* <NavItem>
+<UncontrolledDropdown nav inNavbar>
+    <DropdownToggle nav caret>Options</DropdownToggle>
+    <DropdownMenu end>
+    <DropdownItem>Option 1</DropdownItem>
+    <DropdownItem>Option 2</DropdownItem>
+    <DropdownItem divider />
+    <DropdownItem>Reset</DropdownItem>
+    </DropdownMenu>
+</UncontrolledDropdown>
+</NavItem> */}
+
+### Video Logo in Header
+{/* <video src={firelogo} style={{height:'7vh'}}></video> */}
+
+### Header HTML structure
+<body>
+    <div>
+        <nav
+        class="navbar navbar-expand-md navbar-light bg-light"
+        >
+        <div
+            class="container-fluid"
+        >
+            <div
+            class="leftSide"
+            >
+            <a
+                class="navbar-brand"
+            >
+                TinderToons
+            </a>
+            <a
+                class="navbar-brand"
+                href="/"
+            >
+                <video
+                src="firelogo.mp4"
+                style="height: 7vh;"
+                />
+            </a>
+            </div>
+            <button
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            type="button"
+            >
+            <span
+                class="navbar-toggler-icon"
+            />
+            </button>
+            <div
+            class="logo"
+            >
+            <div
+                class="collapse navbar-collapse"
+            >
+                <ul
+                class="ml-auto navbar-nav"
+                >
+                <li
+                    class="nav-item"
+                >
+                    <a
+                    class="nav-link"
+                    >
+                    Testing
+                    </a>
+                </li>
+                <li
+                    class="nav-item"
+                >
+                    <a
+                    class="nav-link"
+                    >
+                    Testing
+                    </a>
+                </li>
+                <li
+                    class="nav-item"
+                >
+                    <li
+                    class="dropdown nav-item"
+                    >
+                    <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="dropdown-toggle nav-link"
+                        href="#"
+                    >
+                        Options
+                    </a>
+                    <div
+                        aria-hidden="true"
+                        class="dropdown-menu dropdown-menu-end"
+                        role="menu"
+                        tabindex="-1"
+                    >
+                        <button
+                        class="dropdown-item"
+                        role="menuitem"
+                        tabindex="0"
+                        type="button"
+                        >
+                        Option 1
+                        </button>
+                        <button
+                        class="dropdown-item"
+                        role="menuitem"
+                        tabindex="0"
+                        type="button"
+                        >
+                        Option 2
+                        </button>
+                        <div
+                        class="dropdown-divider"
+                        tabindex="-1"
+                        />
+                        <button
+                        class="dropdown-item"
+                        role="menuitem"
+                        tabindex="0"
+                        type="button"
+                        >
+                        Reset
+                        </button>
+                    </div>
+                    </li>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </nav>
+    </div>
+</body>

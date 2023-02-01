@@ -7,7 +7,8 @@ const Home = () => {
       <div className="bgContainer">
         <img 
           src={biggerlogo} 
-          className='homeBackground'
+          className="homeBackground"
+          alt="TinderToons Logo"
         />
       </div>
     </>
