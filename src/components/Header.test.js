@@ -14,9 +14,4 @@ describe("<Header />", () => {
     expect(logo).toHaveAttribute("src", "biggerlogo.gif")
     expect(logo).toHaveAttribute("alt", "TinderToons Logo")
   })
-  
-//   For when clickable links are added
-//   it("has clickable links", () => {
-//    render(<Header />, div)
-//   })
 })

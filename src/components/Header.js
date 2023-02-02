@@ -1,5 +1,4 @@
 import { React, useState } from 'react'
-import firelogo from '../assets/firelogo.mp4'
 import biggerlogo from '../assets/biggerlogo.gif'
 import {
   Collapse,
@@ -8,11 +7,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap'
 
 const Header = () => {
@@ -28,7 +23,13 @@ const Header = () => {
         <div className='leftSide'>
           <NavbarBrand>TinderToons</NavbarBrand>
           <NavbarBrand href="/">
-            <img src={biggerlogo} style={{height:'7vh'}} alt="TinderToons Logo"/>
+            <img 
+              src={biggerlogo} 
+              style={{
+                height:'7vh'
+              }} 
+              alt="TinderToons Logo"
+            />
           </NavbarBrand>
         </div>
         <NavbarToggler onClick={toggle} />

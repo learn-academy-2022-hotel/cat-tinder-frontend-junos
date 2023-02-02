@@ -74,6 +74,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 https://www.canva.com/design/DAFZR1T4EMw/ahIyP1q8yEYNyLZU04B_GQ/watch?utm_content=DAFZR1T4EMw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
 
 ### Dropdown (for Header) structure
+imports:
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+  
 {/* <NavItem>
 <UncontrolledDropdown nav inNavbar>
     <DropdownToggle nav caret>Options</DropdownToggle>

@@ -14,14 +14,14 @@ describe("<NotFound />", () => {
   })
   
   it("renders a 404 Not Found message", () => {
-      const div = document.createElement("div")
-      render(
-          <BrowserRouter>
-          <NotFound />
-        </BrowserRouter>,
-        div
-        )
-        const names = screen.getByText("404 NOT FOUND")
-        expect(names).toBeInTheDocument()
-    })
+    const div = document.createElement("div")
+    render(
+      <BrowserRouter>
+        <NotFound />
+      </BrowserRouter>,
+      div
+    )
+    const names = screen.getByText("404 NOT FOUND")
+    expect(names).toBeInTheDocument()
+  })
 })
