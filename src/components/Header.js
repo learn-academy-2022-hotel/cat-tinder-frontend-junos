@@ -1,6 +1,5 @@
 import { React, useState } from 'react'
-import firelogo from '../assets/firelogo.mp4'
-import { Fragment } from 'react'
+import biggerlogo from '../assets/biggerlogo.gif'
 import {
   Collapse,
   Navbar,
@@ -8,11 +7,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap'
 
 const Header = () => {
@@ -23,12 +18,18 @@ const Header = () => {
   }
 
   return (
-    <Fragment>
+    <>
       <Navbar color="light" light expand="md">
         <div className='leftSide'>
           <NavbarBrand>TinderToons</NavbarBrand>
           <NavbarBrand href="/">
-            <video src={firelogo} style={{height:'7vh'}}></video>
+            <img 
+              src={biggerlogo} 
+              style={{
+                height:'7vh'
+              }} 
+              alt="TinderToons Logo"
+            />
           </NavbarBrand>
         </div>
         <NavbarToggler onClick={toggle} />
@@ -36,28 +37,21 @@ const Header = () => {
           <Collapse isOpen={toggled} navbar>
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink>Testing</NavLink>
+                <NavLink>Testing1</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Testing</NavLink>
+                <NavLink>Testing2</NavLink>
               </NavItem>
               <NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>Options</DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Option 1</DropdownItem>
-                    <DropdownItem>Option 2</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Reset</DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
+                <NavLink>Testing3</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </div>
       </Navbar>
-    </Fragment>
+    </>
   )
 }
 
 export default Header
+
