@@ -15,6 +15,10 @@ import './App.css'
 const App = () => {
   const [toons, setToon] = useState(mockToons)
 
+  const addToon = (newToonObj) => {
+    console.log(newToonObj)
+  }
+
   return (
     <>
       <Header />
@@ -22,7 +26,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/toonindex" element={<ToonIndex toons={toons} />} />
         <Route path="/toonshow/:id" element={<ToonShow toons={toons} />} />
-        <Route path="/toonnew" element={<ToonNew />} />
+        <Route path="/toonnew" element={<ToonNew addToon={addToon} />} />
         <Route path="/toonedit" element={<ToonEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
