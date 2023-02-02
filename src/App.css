@@ -35,12 +35,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 
 .card {
-  /* background-color: rgb(77, 110, 240); */
-  margin: 2rem 0;
-  /* box-shadow: 0px 0px 150px 20px gold; */
+  /* height: 30vh; */
+  background-color: rgb(128, 221, 255);
+  margin: 3rem 0;
+  box-shadow: 0px 0px 90px 10px rgb(0, 7, 108);
 }
 
 .toon-show-img {
@@ -48,3 +50,17 @@
   width: 60vw;
   object-fit: contain;
 }
+
+.index-images {
+  height: 30vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  /* aspect-ratio: 1 / 1; */
+}
+/* .index-images-container {
+  height: 30vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+} */

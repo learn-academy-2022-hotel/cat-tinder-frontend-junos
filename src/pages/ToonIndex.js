@@ -12,7 +12,7 @@ const ToonIndex = ({ toons }) => {
               key={index}
               style={{
                 width: '18rem',
-                backgroundColor: 'rgb(77, 110, 240)'
+                backgroundColor: 'rgb(128, 221, 255)'
               }}
             >
               <CardBody>
@@ -26,11 +26,14 @@ const ToonIndex = ({ toons }) => {
                   Hi there, I'm using TinderToons!
                 </CardSubtitle>
               </CardBody>
-              <img
-                alt="Card cap"
-                src={toon.image}
-                width="100%"
-              />
+              <div className="index-images">
+                <img
+                  alt="Card cap"
+                  src={toon.image}
+                  width="100%"
+                  // className="index-images"
+                />
+              </div>
               <CardBody>
                 <CardText>
                   Some quick example text to build on the card title and make up the bulk of the card‘s content.
