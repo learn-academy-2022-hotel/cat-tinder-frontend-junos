@@ -20,8 +20,8 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/toonindex" element={<ToonIndex />} />
-        <Route path="/toonshow" element={<ToonShow />} />
+        <Route path="/toonindex" element={<ToonIndex toons={toons} />} />
+        <Route path="/toonshow/:id" element={<ToonShow toons={toons} />} />
         <Route path="/toonnew" element={<ToonNew />} />
         <Route path="/toonedit" element={<ToonEdit />} />
         <Route path="*" element={<NotFound />} />
