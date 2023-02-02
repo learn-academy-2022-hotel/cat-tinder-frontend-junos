@@ -1,6 +1,7 @@
 .logo {
   display: flex;
   justify-content: flex-end;
+  /* text-align: right; */
   gap: 30px;
   color: black
 }
@@ -29,3 +30,21 @@
 /* .footer {
   background-color: rgb(180, 169, 169);
 } */
+
+.toon-index-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  /* background-color: rgb(77, 110, 240); */
+  margin: 2rem 0;
+  /* box-shadow: 0px 0px 150px 20px gold; */
+}
+
+.toon-show-img {
+  height: 40vh;
+  width: 60vw;
+  object-fit: contain;
+}

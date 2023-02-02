@@ -7,7 +7,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Container
 } from 'reactstrap'
 
 const Header = () => {
@@ -20,7 +21,7 @@ const Header = () => {
   return (
     <>
       <Navbar color="light" light expand="md">
-        <div className='leftSide'>
+        <Container className='leftSide'>
           <NavbarBrand>TinderToons</NavbarBrand>
           <NavbarBrand href="/">
             <img 
@@ -31,10 +32,10 @@ const Header = () => {
               alt="TinderToons Logo"
             />
           </NavbarBrand>
-        </div>
+        </Container>
         <NavbarToggler onClick={toggle} />
-        <div className='logo'>
-          <Collapse isOpen={toggled} navbar>
+        <Container>
+          <Collapse isOpen={toggled} navbar className='logo'>
             <Nav className='ml-auto' navbar>
               <NavItem>
                 <NavLink>Testing1</NavLink>
@@ -47,7 +48,7 @@ const Header = () => {
               </NavItem>
             </Nav>
           </Collapse>
-        </div>
+        </Container>
       </Navbar>
     </>
   )
