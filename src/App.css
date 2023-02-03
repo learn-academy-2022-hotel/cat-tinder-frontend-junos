@@ -1,19 +1,27 @@
 .logo {
   display: flex;
   justify-content: flex-end;
-  /* text-align: right; */
   gap: 30px;
   color: black
 }
 
 .homeBackground {
-  /* height: 93vh;
-  width: 100vw */
   border-radius: 300px;
+  max-height: 50%;
+  max-width: 50%;
+  margin-top: 10vh;
+  background-image: linear-gradient(rgb(151,253,254),rgb(15,59,120))
+}
+
+.homeMain {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgb(151,253,254),rgb(15,59,120))
 }
 
 .bgContainer {
-  height: 70vh;
+  /* height: 70%;
+  width: 40%; */
   display: flex;
   justify-content: center;
   align-self: center;
@@ -27,40 +35,64 @@
   background-image: url(https://images.unsplash.com/photo-1620336655052-b57986f5a26a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 }
 
-/* .footer {
-  background-color: rgb(180, 169, 169);
-} */
 
+.card {
+  background-color: rgb(128, 221, 255);
+  margin: 3rem 0;
+  box-shadow: 0px 0px 100px 20px rgb(12, 31, 67);
+}
+
+/* SHOW PAGE */
+.toon-show-img {
+  height: 40vh;
+  /* width: 30vw; */
+  object-fit: cover;
+  box-shadow: -20px 20px 20px 1px rgb(8,38,95);
+  /* border-radius: 300px; */
+}
+
+.showPageMain {
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  /* background-color: rgb(55,156,234); */
+  background-image: linear-gradient(rgb(151,253,254),rgb(15,59,120))
+}
+
+.ageText {
+  font-weight: 200;
+  font-size: 2.5vmin;
+}
+
+.ageBold {
+  font-size: 3vmin;
+}
+
+/* INDEX */
 .toon-index-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-top: 7vh;
 }
-
-.card {
-  /* height: 30vh; */
-  background-color: rgb(128, 221, 255);
-  margin: 3rem 0;
-  box-shadow: 0px 0px 90px 10px rgb(0, 7, 108);
-}
-
-.toon-show-img {
-  height: 40vh;
-  width: 60vw;
-  object-fit: contain;
-}
-
 .index-images {
+  display: flex;
+  align-items: center;
   height: 30vh;
+  width: 90%;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  /* aspect-ratio: 1 / 1; */
+  background-color: rgb(55,156,234);
 }
-/* .index-images-container {
-  height: 30vh;
-  margin: 0 auto;
-  overflow: hidden;
+
+/* NEW */
+.addingForm {
+  width: 80vw;
   position: relative;
-} */
+  left: 30px;
+  font-weight: bolder;
+}

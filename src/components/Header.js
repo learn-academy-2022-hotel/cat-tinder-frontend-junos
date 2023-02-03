@@ -27,7 +27,8 @@ const Header = () => {
             <img 
               src={biggerlogo} 
               style={{
-                height:'7vh'
+                height:'7vh',
+                borderRadius:'50px'
               }} 
               alt="TinderToons Logo"
             />
@@ -38,13 +39,13 @@ const Header = () => {
           <Collapse isOpen={toggled} navbar className='logo'>
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink>Testing1</NavLink>
+                <NavLink href="/toonindex">Browse</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Testing2</NavLink>
+                <NavLink href="/toonnew">Create Profile</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Testing3</NavLink>
+                <NavLink href="/toonedit">Settings</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

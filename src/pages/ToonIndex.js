@@ -1,6 +1,5 @@
 import React from "react"
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink } from "reactstrap"
-import NavLink from "react-router-dom"
 
 const ToonIndex = ({ toons }) => {
   return (
@@ -12,7 +11,7 @@ const ToonIndex = ({ toons }) => {
               key={index}
               style={{
                 width: '18rem',
-                backgroundColor: 'rgb(128, 221, 255)'
+                backgroundColor: 'rgb(140,237,244)'
               }}
             >
               <CardBody>
@@ -31,7 +30,6 @@ const ToonIndex = ({ toons }) => {
                   alt="Card cap"
                   src={toon.image}
                   width="100%"
-                  // className="index-images"
                 />
               </div>
               <CardBody>
