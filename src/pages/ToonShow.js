@@ -10,16 +10,20 @@ const ToonShow = ({ toons }) => {
     <>
       <main>
         {currentToon && (
-          <div>
+          <div className="showPageMain">
+            <h1>{`Hi, my name is ${currentToon.name}!`}</h1>
+            <br></br>
             <img
               alt={`Profile of ${currentToon.name}`}
               src={currentToon.image}
               className="toon-show-img"
             />
+            <br></br>
             <div>
-              <h4>I am {currentToon.age} years old.</h4>
-              <h4>I enjoy: </h4>
-              <p>{currentToon.enjoys_doing}!</p>
+              <h4 className="ageBold">Age: <span className="ageText">{`${currentToon.age} years`}</span></h4>
+              <br></br>
+              <h4 className="ageBold">I enjoy: </h4>
+              <p className="ageText">{currentToon.enjoys_doing}!</p>
             </div>
           </div>
         )}
