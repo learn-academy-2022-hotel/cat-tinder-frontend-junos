@@ -2,7 +2,7 @@ import React from "react"
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-const ToonShow = ({ toons }) => {
+const ToonShow = ({ toons, deleteToon }) => {
 
   const { id } = useParams()
   let currentToon = toons?.find(toon => toon.id === +id)
@@ -10,6 +10,11 @@ const ToonShow = ({ toons }) => {
   const navigate = useNavigate()
   const handleClick = () => {
     navigate(`/toonedit/${currentToon.id}`)
+  }
+
+  const handleDelete = () => {
+    deleteToon(currentToon)
+    navigate('/toonindex')
   }
 
   return (
@@ -32,6 +37,7 @@ const ToonShow = ({ toons }) => {
               <p className="ageText">{currentToon.enjoys_doing}!</p>
             </div>
             <button onClick={handleClick}>Edit Toon</button>
+            <button onClick={handleDelete}>Delete Toon</button>
           </div>
         )}
       </main>

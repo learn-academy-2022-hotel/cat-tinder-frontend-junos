@@ -3,7 +3,6 @@ import { Form, FormGroup, Label, Col, Input, Button } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
-
 const ToonEdit = ({ editToon, toons }) => {
   const { id } = useParams()
   let currentToon = toons?.find(toon => toon.id === +id)
@@ -28,7 +27,6 @@ const ToonEdit = ({ editToon, toons }) => {
 
   return (
     <>
-          <>
       <div className="addingForm">
         <Form>
           <FormGroup row>
@@ -119,7 +117,6 @@ const ToonEdit = ({ editToon, toons }) => {
           </FormGroup>
         </Form>
       </div>
-    </>
     </>
   )
 }
