@@ -1,8 +1,8 @@
 import { React, useState } from "react"
-import { Form, FormGroup, Label, Col, Input, FormText, Button } from 'reactstrap'
+import { Form, FormGroup, Label, Col, Input, Button } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 
-const ToonNew = ({ editToon }) => {
+const ToonNew = ({ createToon }) => {
 
   const [newToon, setNewToon] = useState({
     name: "",
@@ -18,7 +18,7 @@ const ToonNew = ({ editToon }) => {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
-    editToon(newToon)
+    createToon(newToon)
     navigate("/toonindex")
   }
 
@@ -79,21 +79,19 @@ const ToonNew = ({ editToon }) => {
           </FormGroup>
           <FormGroup row>
             <Label
-              for="exampleFile"
+              for="exampleText"
               sm={2}
             >
               Image
             </Label>
             <Col sm={10}>
               <Input
-                id="exampleFile"
+                id="image"
                 name="image"
-                type="file"
+                placeholder="add a hot picture of you"
+                type="text"
                 onChange={handleChange}
               />
-              <FormText>
-                This is some placeholder block-level help text for the above input. It‘s a bit lighter and easily wraps to a new line.
-              </FormText>
             </Col>
           </FormGroup>
           <FormGroup
