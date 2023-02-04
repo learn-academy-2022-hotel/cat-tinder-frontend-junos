@@ -27,8 +27,13 @@ describe("<ToonShow />", () => {
   })
   it("renders cards with enjoys doing", () => {
     renderShow()
-    expect(screen.getByText(mockToons[0].enjoys_doing + '!')).toBeInTheDocument()
     const div = document.createElement("div")
-    render(<ToonShow toons={mockToons} />, div)
+    render(
+      <BrowserRouter>
+        <ToonShow toons={mockToons}/>
+      </BrowserRouter>,
+      div
+    )  
+    expect(screen.getByText(mockToons[0].enjoys_doing + '!')).toBeInTheDocument()
   })
 })

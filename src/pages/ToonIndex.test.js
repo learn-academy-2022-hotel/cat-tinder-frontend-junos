@@ -18,8 +18,8 @@ describe("<ToonIndex />", () => {
     const div = document.createElement("div")
     render(<ToonIndex toons={mockToons} />, div)
     mockToons.forEach(toon => {
-      const toonName = screen.getByText(toon.name)
-      expect(toonName).toBeInTheDocument()
+      const toonName = screen.getAllByText(toon.name)
+      expect(toonName[0]).toBeInTheDocument()
     })
   })
 })

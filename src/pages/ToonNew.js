@@ -2,7 +2,7 @@ import { React, useState } from "react"
 import { Form, FormGroup, Label, Col, Input, FormText, Button } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 
-const ToonNew = ({ addToon }) => {
+const ToonNew = ({ editToon }) => {
 
   const [newToon, setNewToon] = useState({
     name: "",
@@ -18,7 +18,7 @@ const ToonNew = ({ addToon }) => {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
-    addToon(newToon)
+    editToon(newToon)
     navigate("/toonindex")
   }
 

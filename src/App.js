@@ -19,6 +19,10 @@ const App = () => {
     console.log(newToonObj)
   }
 
+  const editToon = (newToonObj) => {
+    console.log(newToonObj)
+  }
+
   return (
     <>
       <Header />
@@ -27,7 +31,7 @@ const App = () => {
         <Route path="/toonindex" element={<ToonIndex toons={toons} />} />
         <Route path="/toonshow/:id" element={<ToonShow toons={toons} />} />
         <Route path="/toonnew" element={<ToonNew addToon={addToon} />} />
-        <Route path="/toonedit" element={<ToonEdit />} />
+        <Route path="/toonedit/:id" element={<ToonEdit editToon={editToon} toons={toons} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

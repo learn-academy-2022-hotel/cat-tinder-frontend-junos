@@ -73,6 +73,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### logo
 https://www.canva.com/design/DAFZR1T4EMw/ahIyP1q8yEYNyLZU04B_GQ/watch?utm_content=DAFZR1T4EMw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
 
+## Image import for new and edit
+<FormGroup row>
+    <Label
+        for="exampleFile"
+        sm={2}
+    >
+        Image
+    </Label>
+    <Col sm={10}>
+        <Input
+        id="exampleFile"
+        name="image"
+        type="file"
+        onChange={handleChange}
+        />
+        <FormText>
+        This is some placeholder block-level help text for the above input. It‘s a bit lighter and easily wraps to a new line.
+        </FormText>
+    </Col>
+</FormGroup>
+
 ### Dropdown (for Header) structure
 imports:
   UncontrolledDropdown,
