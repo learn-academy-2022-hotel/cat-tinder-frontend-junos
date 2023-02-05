@@ -3,7 +3,7 @@ import { Form, FormGroup, Label, Col, Input, Button } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
-const ToonEdit = ({ editToon, toons }) => {
+const ToonEdit = ({ updateToon, toons }) => {
   const { id } = useParams()
   let currentToon = toons?.find(toon => toon.id === +id)
 
@@ -21,7 +21,7 @@ const ToonEdit = ({ editToon, toons }) => {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
-    editToon(newToon)
+    updateToon(newToon, id)
     navigate(`/toonshow/${currentToon.id}`)
   }
 
@@ -98,14 +98,14 @@ const ToonEdit = ({ editToon, toons }) => {
             </Col>
           </FormGroup>
           <FormGroup
-            check
-            row
+            // check
+            // row
           >
             <Col
-              sm={{
-                offset: 2,
-                size: 10
-              }}
+              // sm={{
+              //   offset: 2,
+              //   size: 10
+              // }}
             >
               <Button
                 alt="Submit Button"

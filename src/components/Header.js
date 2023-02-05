@@ -20,32 +20,55 @@ const Header = () => {
 
   return (
     <>
-      <Navbar color="light" light expand="md">
-        <Container className='leftSide'>
-          <NavbarBrand>TinderToons</NavbarBrand>
-          <NavbarBrand href="/">
+      <Navbar fixed='top' light expand="md" style={{backgroundColor:'rgb(97,97,97)', maxHeight:'6.5vh'}}>
+        <Container className='leftSide' style={{display:'flex', justifyContent:'left'}}>
+          <NavbarBrand style={{
+            display:'flex', 
+            justifyContent:'left', 
+            alignItems:'center',
+            }}
+          >
+            <h4 className='flicker'>
+              TinderToons
+            </h4>
             <img 
               src={biggerlogo} 
               style={{
-                height:'7vh',
-                borderRadius:'50px'
+                height:'6.5vh',
+                borderRadius:'50px',
+                marginLeft:'2.5%'
               }} 
               alt="TinderToons Logo"
             />
           </NavbarBrand>
         </Container>
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler className='ml-auto' onClick={toggle} />
         <Container>
           <Collapse isOpen={toggled} navbar className='logo'>
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink href="/toonindex">Browse</NavLink>
+                <NavLink 
+                  href="/toonindex" 
+                  style={{color: 'rgb(151,253,254)'}}
+                >
+                  Browse
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/toonnew">Create Profile</NavLink>
+                <NavLink 
+                  href="/toonnew" 
+                  style={{color: 'rgb(151,253,254)'}}
+                >
+                  Create Profile
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/toonedit">Settings</NavLink>
+                <NavLink 
+                  href="/toonedit"
+                  style={{color: 'rgb(151,253,254)'}}
+                >
+                  Settings
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

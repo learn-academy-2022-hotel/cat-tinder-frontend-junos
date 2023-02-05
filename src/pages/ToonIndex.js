@@ -1,17 +1,33 @@
 import React from "react"
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink } from "reactstrap"
+import biggerlogo from '../assets/biggerlogo.gif'
 
 const ToonIndex = ({ toons }) => {
+
+  const shuffle = (values) => {
+    let index = values.length, randomIndex;
+    while (index != 0) {
+      randomIndex = Math.floor(Math.random() * index);
+      index--;
+      [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
+    }
+    return values;
+  }
+
   return (
     <>
+      <h2 className="indexHeader">Have fun</h2>
       <main className="toon-index-cards">
-        {toons?.map((toon, index) => {
+        {shuffle(toons?.map((toon, index) => {
           return(
             <Card
               key={index}
               style={{
                 width: '18rem',
-                backgroundColor: 'rgb(140,237,244)'
+                backgroundColor: 'rgb(140,237,244)',
+                minWidth: '21vw',
+                marginRight: '2%',
+                marginLeft: '2%',
               }}
             >
               <CardBody>
@@ -47,7 +63,7 @@ const ToonIndex = ({ toons }) => {
               </CardBody>
             </Card>
           )
-        })}
+        }))}
       </main>
     </>
   )

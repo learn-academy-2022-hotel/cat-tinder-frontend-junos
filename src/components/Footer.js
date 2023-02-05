@@ -5,7 +5,11 @@ const Footer = () => {
   return (
     <>
       <Navbar 
-        color="light" 
+        style={{
+          backgroundColor: 'rgb(97, 97, 97)', 
+          height:'3.5vh',
+          color:'rgb(151,253,254)'
+        }}
         fixed="bottom"
       >
         Created by: © JUNOS Inc. Octavio Sifuentes | Chris Lee
