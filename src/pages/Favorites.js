@@ -5,8 +5,8 @@ const Favorites = ({ liked }) => {
   console.log(liked);
   return(
     <>
-      <div style={{marginTop:'10vh'}}>
-        <h1>Favorites!</h1>
+      <div style={{marginTop:'10vh', textAlign:'center'}}>
+        <h1>Your Favs!</h1>
         {liked?.map((toon, index) => {
           return(
             <Card

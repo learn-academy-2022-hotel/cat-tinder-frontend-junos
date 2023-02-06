@@ -40,7 +40,7 @@
   font-weight: bold;
   color: rgb(15,59,120);
   display: inline-flex;
-  animation: rotate 8s infinite;
+  animation: rotate 7s infinite;
 }
 @keyframes rotate {
   0%,
@@ -98,7 +98,8 @@
 }
 
 .showPageMain {
-  height: 98vh;
+  height: 93vh;
+  margin-top: 7vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,12 +109,27 @@
 }
 
 .ageText {
-  font-weight: 200;
-  font-size: 2.5vmin;
+  font-weight: bold;
+  font-size: 2.2vmin;
 }
 
 .ageBold {
   font-size: 3vmin;
+  font-weight: bold;
+}
+
+.showButtons {
+  border-radius: 10px;
+  background-color: #323435;
+  transition: 0.3s ease-in-out;
+  color: #e6e6e6;
+  font-weight: bold;
+}
+
+.showButtons:hover {
+  background-color: rgb(251, 248, 248);
+  color: #323435;
+  font-weight: bold;
 }
 
 /* INDEX */

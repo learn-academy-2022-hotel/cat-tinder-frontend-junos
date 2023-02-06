@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useNavigate } from "react"
+import { Navigate } from "react-router-dom"
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink } from "reactstrap"
 import biggerlogo from '../assets/biggerlogo.gif'
 
@@ -14,6 +15,11 @@ const ToonIndex = ({ toons }) => {
     return values;
   }
 
+  // const navigate = useNavigate()
+  // const toShow = () => {
+  //   navigate(`/toonshow/${toon.id}`)
+  // }
+
   return (
     <>
       <h2 className="indexHeader">Have fun</h2>
@@ -25,7 +31,7 @@ const ToonIndex = ({ toons }) => {
               style={{
                 width: '18rem',
                 backgroundColor: 'rgb(140,237,244)',
-                minWidth: '21vw',
+                minWidth: '20vw',
                 marginRight: '2%',
                 marginLeft: '2%',
               }}
@@ -48,17 +54,18 @@ const ToonIndex = ({ toons }) => {
                   width="100%"
                 />
               </div>
-              <CardBody>
+              <CardBody style={{display:'flex', justifyContent:'center'}}>
                 <CardText>
                   {/* Some quick example text to build on the card title and make up the bulk of the card‘s content. */}
                 </CardText>
-                <div style={{textAlign:'center'}}>
-                  <CardLink href={`/toonshow/${toon.id}`}>
+                <div style={{textAlign:'center', border:'1px solid black', width:'40%', backgroundColor:'#e3e3e3', color:'white'}}>
+                  <CardLink href={`/toonshow/${toon.id}`} style={{textDecoration:'none'}}>
                     Interested
                   </CardLink>
-                  <CardLink>
+                  {/* <button onClick={toShow}>Interested</button> */}
+                  {/* <CardLink>
                     Not interested...
-                  </CardLink>
+                  </CardLink> */}
                   </div>
               </CardBody>
             </Card>

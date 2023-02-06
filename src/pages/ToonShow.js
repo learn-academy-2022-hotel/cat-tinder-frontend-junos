@@ -19,6 +19,7 @@ const ToonShow = ({ toons, deleteToon, likedToons }) => {
 
   const favorite = () => {
     likedToons(currentToon)
+    navigate('/favorites')
   }
 
   return (
@@ -40,9 +41,11 @@ const ToonShow = ({ toons, deleteToon, likedToons }) => {
               <h4 className="ageBold">I enjoy: </h4>
               <p className="ageText">{currentToon.enjoys_doing}!</p>
             </div>
-            <button onClick={favorite}>Favorite</button>
-            <button onClick={handleClick}>Edit Toon</button>
-            <button onClick={handleDelete}>Delete Toon</button>
+            <div style={{display:'flex', gap:'3vw'}}>
+              <button onClick={favorite} className='showButtons'>Favorite</button>
+              <button onClick={handleClick} className='showButtons'>Edit Toon</button>
+              <button onClick={handleDelete} className='showButtons'>Delete Toon</button>
+            </div>
           </div>
         )}
       </main>

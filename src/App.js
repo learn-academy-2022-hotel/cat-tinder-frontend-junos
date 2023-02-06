@@ -68,9 +68,8 @@ const App = () => {
 
   const likedToons = (toonObj) => {
     if(!liked.includes(toonObj)) {
-      setLiked(liked.push(toonObj));
+      setLiked([...liked, toonObj]);
     }
-    console.log(liked);
   }
 
 

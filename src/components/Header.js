@@ -72,10 +72,10 @@ const Header = () => {
               </NavItem>
               <NavItem>
                 <NavLink 
-                  href="/toonedit"
+                  href="/favorites"
                   style={{color: 'rgb(151,253,254)'}}
                 >
-                  Settings
+                  Favorites
                 </NavLink>
               </NavItem>
             </Nav>
