@@ -1,24 +1,13 @@
-import React, { useState } from "react"
-import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink } from "reactstrap"
-import biggerlogo from '../assets/biggerlogo.gif'
+import React from "react";
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink } from 'reactstrap'
 
-const ToonIndex = ({ toons }) => {
-
-  const shuffle = (values) => {
-    let index = values.length, randomIndex;
-    while (index != 0) {
-      randomIndex = Math.floor(Math.random() * index);
-      index--;
-      [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
-    }
-    return values;
-  }
-
-  return (
+const Favorites = ({ liked }) => {
+  console.log(liked);
+  return(
     <>
-      <h2 className="indexHeader">Have fun</h2>
-      <main className="toon-index-cards">
-        {shuffle(toons?.map((toon, index) => {
+      <div style={{marginTop:'10vh'}}>
+        <h1>Favorites!</h1>
+        {liked?.map((toon, index) => {
           return(
             <Card
               key={index}
@@ -63,10 +52,10 @@ const ToonIndex = ({ toons }) => {
               </CardBody>
             </Card>
           )
-        }))}
-      </main>
+        })}
+      </div>
     </>
   )
 }
 
-export default ToonIndex
+export default Favorites

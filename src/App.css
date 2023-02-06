@@ -5,6 +5,7 @@
   color: black
 }
 
+/* HOME PAGE */
 .homeBackground {
   border-radius: 300px;
   max-height: 50%;
@@ -28,13 +29,58 @@
   padding-top: 5vh;
 }
 
-.notfound {
-  height: 100%;
-  width: 100%;
-  border: 1px solid black;
-  background-image: url(https://images.unsplash.com/photo-1620336655052-b57986f5a26a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+.rotate {
+  position: relative;
+  top: 8vh;
+  text-align: center;
 }
 
+.rotate span {
+  font-size: 8vmin;
+  font-weight: bold;
+  color: rgb(15,59,120);
+  display: inline-flex;
+  animation: rotate 8s infinite;
+}
+@keyframes rotate {
+  0%,
+  65% {
+      transform: rotateY(360deg);
+  }
+}
+.nine span:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.nine span:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.nine span:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+.nine span:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+.nine span:nth-of-type(5) {
+  animation-delay: 1s;
+}
+.nine span:nth-of-type(6) {
+  animation-delay: 1.2s;
+}
+.nine span:nth-of-type(7) {
+  animation-delay: 1.4s;
+}
+.nine span:nth-of-type(8) {
+  animation-delay: 1.6s;
+}
+.nine span:nth-of-type(9) {
+  animation-delay: 1.8s;
+}
+.nine span:nth-of-type(10) {
+  animation-delay: 2s;
+}
+.nine span:nth-of-type(11) {
+  animation-delay: 2.2s;
+}
 
 .card {
   background-color: rgb(128, 221, 255);
@@ -121,6 +167,15 @@ div.container-fluid{
   flex-wrap: nowrap;
 }
 
+.toonLogo {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.toonLogo:hover {
+  /* transform: scale(1.05); */
+}
+
 div.leftSide.container {
 }
 
@@ -134,12 +189,19 @@ li.nav-item {
 
 li.nav-item:hover {
   color: black;
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* NOT FOUND */
-.errorMessage {
+/* .errorMessage {
   font-size: 10vmax;
+} */
+
+.notfound {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  background-image: url("../src/assets/errorpic.png");
 }
 
 /* flicker animation on header */
@@ -147,6 +209,8 @@ transform: scale(1.1);
   /* font-size: 6rem; */
   /* font-family: 'Merienda', sans-serif; */
   /* margin: 1rem auto; */
+  font-family: 'sunglasstype';
+  font-weight: bold;
   color: rgb(28, 32, 143);
   background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#ffffff), color-stop(0.8, #ffffff)) no-repeat;
   background: gradient(linear, left top, right top, from(rgb(254, 254, 254)), to(rgb(255, 255, 255)), color-stop(0.8, #fff)) no-repeat;
