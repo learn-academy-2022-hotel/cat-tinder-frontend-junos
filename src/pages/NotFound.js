@@ -6,13 +6,19 @@ const NotFound = () => {
       <div 
         className="notfound" 
         style={{
-          height:'90vh', 
+          height:'97vh', 
           width:'100vw', 
-          textAlign:'center', 
-          fontSize:'300px'
+          textAlign:'center',
+          backgroundSize:'cover',
+          backgroundPosition:'center',
+          display:'flex',
+          justifyContent:'center',
+          alignItems:'center'
         }}
       >
-        404 NOT FOUND
+        <h1 className="errorMessage">
+          404 NOT FOUND
+        </h1>
       </div>
     </>
   )

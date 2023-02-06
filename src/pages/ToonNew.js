@@ -95,16 +95,17 @@ const ToonNew = ({ createToon }) => {
             </Col>
           </FormGroup>
           <FormGroup
-            check
-            row
+            // check
+            // row
           >
             <Col
-              sm={{
-                offset: 2,
-                size: 10
-              }}
+              // sm={{
+              //   offset: 2,
+              //   size: 10
+              // }}
             >
               <Button
+                className="submitNew"
                 alt="Submit Button"
                 onClick={handleSubmit}
               >

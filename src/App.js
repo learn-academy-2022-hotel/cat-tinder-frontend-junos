@@ -35,7 +35,7 @@ const App = () => {
       .then(payload => readToons())
       .catch(errors => console.log("createToon errors", errors))
   }
-  
+
   const deleteToon = (toonObj) => {
     fetch(`http://localhost:3000/toons/${toonObj.id}`, {
       method: 'DELETE',
@@ -49,14 +49,14 @@ const App = () => {
       .catch(errors => console.log("createToon errors", errors))
   }
   
-  const editToon = (toonObj) => {
+  const updateToon = (toonObj, id) => {
     console.log(toonObj)
-    fetch(`http://localhost:3000/toons/${toonObj.id}`, {
-      method: 'PUT',
+    fetch(`http://localhost:3000/toons/${id}`, {
+      body: JSON.stringify(toonObj),
       headers: {
-        'Content-Type': 'application/json; charset=UTF-8'
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(toonObj)
+      method: "PATCH"
     })
       .then(response => response.json())
       .then(payload => readToons())
@@ -71,7 +71,7 @@ const App = () => {
         <Route path="/toonindex" element={<ToonIndex toons={toons} />} />
         <Route path="/toonshow/:id" element={<ToonShow toons={toons} deleteToon={deleteToon} />} />
         <Route path="/toonnew" element={<ToonNew createToon={createToon} />} />
-        <Route path="/toonedit/:id" element={toons.length > 0 && <ToonEdit editToon={editToon} toons={toons} />} />
+        <Route path="/toonedit/:id" element={toons.length > 0 && <ToonEdit updateToon={updateToon} toons={toons} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
