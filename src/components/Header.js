@@ -10,6 +10,7 @@ import {
   NavLink,
   Container
 } from 'reactstrap'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const [toggled, setToggled] = useState(false)
@@ -18,6 +19,11 @@ const Header = () => {
     setToggled(!toggled)
   }
 
+  const navigate = useNavigate()
+
+  const goHome = () => {
+    navigate("/")
+  }
   return (
     <>
       <Navbar fixed='top' light expand="md" style={{backgroundColor:'rgb(97,97,97)', maxHeight:'6.5vh'}}>
@@ -32,6 +38,7 @@ const Header = () => {
               TinderToons
             </h4>
             <img 
+              className='toonLogo'
               src={biggerlogo} 
               style={{
                 height:'6.5vh',
@@ -39,6 +46,7 @@ const Header = () => {
                 marginLeft:'2.5%'
               }} 
               alt="TinderToons Logo"
+              onClick={goHome}
             />
           </NavbarBrand>
         </Container>

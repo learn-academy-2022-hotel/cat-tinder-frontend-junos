@@ -2,7 +2,7 @@ import React from "react"
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-const ToonShow = ({ toons, deleteToon }) => {
+const ToonShow = ({ toons, deleteToon, likedToons }) => {
 
   const { id } = useParams()
   let currentToon = toons?.find(toon => toon.id === +id)
@@ -15,6 +15,10 @@ const ToonShow = ({ toons, deleteToon }) => {
   const handleDelete = () => {
     deleteToon(currentToon)
     navigate('/toonindex')
+  }
+
+  const favorite = () => {
+    likedToons(currentToon)
   }
 
   return (
@@ -36,6 +40,7 @@ const ToonShow = ({ toons, deleteToon }) => {
               <h4 className="ageBold">I enjoy: </h4>
               <p className="ageText">{currentToon.enjoys_doing}!</p>
             </div>
+            <button onClick={favorite}>Favorite</button>
             <button onClick={handleClick}>Edit Toon</button>
             <button onClick={handleDelete}>Delete Toon</button>
           </div>

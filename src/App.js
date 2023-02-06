@@ -8,6 +8,7 @@ import ToonNew from "./pages/ToonNew"
 import ToonShow from "./pages/ToonShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
+import Favorites from "./pages/Favorites"
 import './App.css'
 
 
@@ -63,15 +64,26 @@ const App = () => {
       .catch(errors => console.log("createToon errors", errors))
     }
 
+  const [liked, setLiked] = useState([])
+
+  const likedToons = (toonObj) => {
+    if(!liked.includes(toonObj)) {
+      setLiked(liked.push(toonObj));
+    }
+    console.log(liked);
+  }
+
+
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/toonindex" element={<ToonIndex toons={toons} />} />
-        <Route path="/toonshow/:id" element={<ToonShow toons={toons} deleteToon={deleteToon} />} />
+        <Route path="/toonshow/:id" element={<ToonShow toons={toons} deleteToon={deleteToon} likedToons={likedToons} />} />
         <Route path="/toonnew" element={<ToonNew createToon={createToon} />} />
         <Route path="/toonedit/:id" element={toons.length > 0 && <ToonEdit updateToon={updateToon} toons={toons} />} />
+        <Route path="/favorites" element={<Favorites liked={liked} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

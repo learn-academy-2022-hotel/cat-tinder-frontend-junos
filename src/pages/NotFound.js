@@ -16,9 +16,6 @@ const NotFound = () => {
           alignItems:'center'
         }}
       >
-        <h1 className="errorMessage">
-          404 NOT FOUND
-        </h1>
       </div>
     </>
   )
